@@ -1,6 +1,6 @@
 const User = require("../models/user");
 const ErrorHandler = require("../utils/ErrorHandler");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const sendToken = require("../utils/jwtToken");
 const models = require("../models");
 

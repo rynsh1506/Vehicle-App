@@ -11,6 +11,8 @@ services:
     volumes:
     - .:/usr/src/app
     - ./node_modules:/usr/src/app/node_modules
+    - ./src/config:/usr/src/app/src/config
+    command: sh -c "npm install && npm start"
     env_file:
       - .env
 

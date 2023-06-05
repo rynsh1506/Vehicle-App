@@ -1,15 +1,13 @@
-// const sequelize = require("../config/dbconection");
+const sequelize = require("./dbconection");
 
-// const syncDatabase = async () => {
-//     try {
-//         await sequelize.sync({ force: true });
+const syncDatabase = async () => {
+    try {
+        await sequelize.sync({ force: true });
 
-//         console.log("Sinkronisasi tabel berhasil.");
-//     } catch (error) {
-//         console.error("Terjadi kesalahan saat sinkronisasi tabel:", error);
-//     } finally {
-//         await sequelize.close();
-//     }
-// };
+        console.log("Sinkronisasi tabel berhasil.");
+    } catch (error) {
+        console.error("Terjadi kesalahan saat sinkronisasi tabel:", error);
+    }
+};
 
-// syncDatabase();
+syncDatabase();
