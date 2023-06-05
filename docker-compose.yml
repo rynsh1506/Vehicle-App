@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  app:
+    container_name: app
+    restart: always
+    build: .
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    volumes:
+    - .:/usr/src/app
+    - ./node_modules:/usr/src/app/node_modules
+    env_file:
+      - .env
+
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - data:/data/db
+    environment:
+      - POSTGRES_USER=${PGUSER}
+      - POSTGRES_PASSWORD=${PGPASSWORD}
+      - POSTGRES_DB=${PGDATABASE}
+  
+  pgadmin:
+    container_name: pgadmin4
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@email.com
+      PGADMIN_DEFAULT_PASSWORD: ${PGPASSWORD}
+    ports:
+      - 5050:80
+ 
+volumes: 
+ data: {}
