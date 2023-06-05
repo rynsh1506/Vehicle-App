@@ -10,4 +10,5 @@
 6. Setelah instalasi selesai, jalankan perintah `npm/yarn dev/start` untuk menjalankan aplikasi.
 8. Jika menggunakan Docker hapus/Sesuaikan image di `docker.compose.yml dan Dockerfile` jika dibutuhkan
 9. Dan jalankan perintah `docker compose up / docker compose -f docker.compose.yml up`
-10. Jika tidak ada masalah selamat menggunakan aplikasi 😊
+10. Saat menjalankan di postman clear nyalakan fitur sync cookies dan clear all cookie 
+11. Jika tidak ada masalah selamat menggunakan aplikasi 😊
