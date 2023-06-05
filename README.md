@@ -13,4 +13,4 @@
 10. Saat menjalankan di postman nyalakan fitur sync cookies dan clear all cookie 
 11. Jika tidak ada masalah selamat menggunakan aplikasi 😊
 
---NB: untuk system logout masih menggunakan system clear cookie manual
+`NB: untuk system logout masih menggunakan system clear cookie manual`
