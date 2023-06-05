@@ -14,17 +14,13 @@ const User = db.define("users", {
     },
     isAdmin: {
         type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
     },
 });
 
 User.prototype.getJwtToken = function () {
     return jwt.sign({ email: this.email }, process.env.JWT_KEY);
 };
-
-// User.create({
-//     email: "asasdasasdfaadsdsadf",
-//     password: "asdfasdfasd",
-//     role: "user",
-// });
 
 module.exports = User;
