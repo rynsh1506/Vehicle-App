@@ -12,3 +12,5 @@
 9. Dan jalankan perintah `docker compose up / docker compose -f docker.compose.yml up`
 10. Saat menjalankan di postman nyalakan fitur sync cookies dan clear all cookie 
 11. Jika tidak ada masalah selamat menggunakan aplikasi 😊
+
+--NB: untuk system logout masih menggunakan system clear cookie manual
