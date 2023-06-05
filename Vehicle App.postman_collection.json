@@ -649,7 +649,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"field\": \"brand\",\r\n            \"name_brand\": \"Lamborgini\"\r\n        },\r\n        {\r\n            \"field\": \"type\",\r\n            \"brand_id\": 1,\r\n            \"name_type\": \"Sport\"\r\n        },\r\n        {\r\n            \"field\": \"model\",\r\n            \"type_id\": 1,\r\n            \"name_model\": \"Aventador\"\r\n        },\r\n        {\r\n            \"field\": \"year\",\r\n            \"year\": \"2023\"\r\n        },\r\n        {\r\n            \"field\": \"price\",\r\n            \"model_id\": 1,\r\n            \"year_id\":1,\r\n            \"peice\": 1200000000\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"entities\": [\r\n        {\r\n            \"field\": \"brand\",\r\n            \"name_brand\": \"Lamborgini\"\r\n        },\r\n        {\r\n            \"field\": \"type\",\r\n            \"brand_id\": 1,\r\n            \"name_type\": \"Sport\"\r\n        },\r\n        {\r\n            \"field\": \"model\",\r\n            \"type_id\": 1,\r\n            \"name_model\": \"Aventador\"\r\n        },\r\n        {\r\n            \"field\": \"year\",\r\n            \"year\": \"2023\"\r\n        },\r\n        {\r\n            \"field\": \"price\",\r\n            \"model_id\": 1,\r\n            \"year_id\":1,\r\n            \"price\": 1200000000\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
