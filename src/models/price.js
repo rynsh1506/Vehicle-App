@@ -3,7 +3,7 @@ const db = require("../config/dbconection");
 
 const Price = db.define("prices", {
     price: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.BIGINT,
         allowNull: false,
     },
     model_id: {

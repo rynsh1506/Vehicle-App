@@ -20,10 +20,34 @@ router.patch(
 
 // router.get("/vehicles", vehicleController.getFilteredVehicles);
 
-router.get("/vehicle-brands", vehicleController.getVehicleBrands);
-router.get("/vehicle-types", vehicleController.getVehicleTypesByBrand);
-router.get("/vehicle-models", vehicleController.getVehicleModelsByType);
-router.get("/vehicle-prices", vehicleController.getVehiclePricesByModelAndYear);
-router.get("/vehicle-years", vehicleController.getVehicleYears);
+router.get(
+    "/vehicle-brands",
+    isAuthenticated,
+    vehicleController.getVehicleBrands
+);
+
+router.get(
+    "/vehicle-types",
+    isAuthenticated,
+    vehicleController.getVehicleTypesByBrand
+);
+
+router.get(
+    "/vehicle-models",
+    isAuthenticated,
+    vehicleController.getVehicleModelsByType
+);
+
+router.get(
+    "/vehicle-prices",
+    isAuthenticated,
+    vehicleController.getVehiclePricesByModelAndYear
+);
+
+router.get(
+    "/vehicle-years",
+    isAuthenticated,
+    vehicleController.getVehicleYears
+);
 
 module.exports = router;
