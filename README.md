@@ -16,5 +16,5 @@
 ## Catatan
 1. Untuk system logout masih menggunakan system clear cookie manual
 2. Dan pada saat `Create Vehicle Entities` anda bisa `comment` field yang tidak ingin di tambahkan lagi ke database dan berlaku juga untuk `Update`
-3. Dan juga jika ingin memasukan data satu persatu di harus kan menggikuti urutan `Field` dari atas kebawah
+3. Dan juga jika ingin memasukan data satu persatu diharuskan menggikuti urutan `Field` dari atas kebawah
 
