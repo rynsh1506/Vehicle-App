@@ -16,6 +16,6 @@
 ## Catatan
 1. Pada proses `Create Vehicle Entities`, Anda dapat mengomentari field yang tidak ingin ditambahkan ke database. Hal ini juga berlaku untuk proses `update`.
 2. Jika ingin memasukkan data satu per satu, pastikan mengikuti urutan field dari atas ke bawah.
-3. Untuk mengupdate dan menghapus pengguna, itu harus dilakukan oleh pengguna dengan ID yang sama dengan pengguna yang sedang login atau oleh otoritas dengan `isAdmin` bernilai `true`.
-4. Pada proses update, jika pengguna memiliki `isAdmin` bernilai `false`, mereka tidak dapat mengakses field `isAdmin` untuk diupdate.
+3. Untuk mengupdate dan menghapus pengguna, itu harus dilakukan oleh pengguna dengan ID yang sama dengan pengguna yang sedang login atau oleh otoritas dengan `isAdmin` yang bernilai `true`.
+4. Pada proses update, jika pengguna yang memiliki `isAdmin` bernilai `false`, mereka tidak dapat mengakses field `isAdmin` untuk diupdate.
 
