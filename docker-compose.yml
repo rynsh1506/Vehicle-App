@@ -2,6 +2,7 @@ version: '3.8'
 services:
   vehicle_app:
     container_name: app
+    image: rynsh1506/vehicle_app
     restart: always
     build: .
     ports:
@@ -15,7 +16,6 @@ services:
     command: sh -c "npm install && npm start"
     env_file:
       - .env
-    image: rynsh1506/vehicle_app
 
   db:
     container_name: postgres
