@@ -11,6 +11,9 @@
 8. Jika menggunakan Docker hapus/Sesuaikan image di `docker.compose.yml dan Dockerfile` jika dibutuhkan
 9. Dan jalankan perintah `docker compose up || docker compose -f docker.compose.yml up || npm run docker`
 10. Saat menjalankan di postman nyalakan fitur sync cookies dan clear all cookie 
-11. Jika tidak ada masalah selamat menggunakan aplikasi 😊
+11. Jika tidak ada masalah selamat anda berhasil menjalankan aplikasi 😊
 
-`NB: untuk system logout masih menggunakan system clear cookie manual`
+## Catatan
+-- Untuk system logout masih menggunakan system clear cookie manual
+-- Dan pada saat `Create Vehicle Entities` anda bisa mengcoment field yang tidak ingin memasukan input tersebut ke database dan berlaku juga untuk `Update`
+
