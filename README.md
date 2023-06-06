@@ -14,6 +14,6 @@
 11. Jika tidak ada masalah selamat anda berhasil menjalankan aplikasi 😊
 
 ## Catatan
--- Untuk system logout masih menggunakan system clear cookie manual
--- Dan pada saat `Create Vehicle Entities` anda bisa mengcoment field yang tidak ingin memasukan input tersebut ke database dan berlaku juga untuk `Update`
+1. Untuk system logout masih menggunakan system clear cookie manual
+2. Dan pada saat `Create Vehicle Entities` anda bisa mengcoment field yang tidak ingin memasukan input tersebut ke database dan berlaku juga untuk `Update`
 
