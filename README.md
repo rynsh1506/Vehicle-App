@@ -1,5 +1,7 @@
 # Vehicle-App
 
+Aplikasi Vehicle-App adalah aplikasi untuk menajement data kendaraan, yang memiliki fitur auhtentikasi multi lavel user access
+
 ## Instalasi
 
 1. Clone repositori ini ke mesin Anda.
