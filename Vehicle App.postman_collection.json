@@ -536,9 +536,16 @@
 							"body": "{\n    \"total\": 4,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"year\": \"2023\",\n            \"createdAt\": \"2023-06-05T07:37:43.705Z\",\n            \"updatedAt\": \"2023-06-05T07:37:43.705Z\"\n        },\n        {\n            \"id\": 3,\n            \"year\": \"2023\",\n            \"createdAt\": \"2023-06-05T07:38:53.942Z\",\n            \"updatedAt\": \"2023-06-05T07:38:53.942Z\"\n        },\n        {\n            \"id\": 4,\n            \"year\": \"2023\",\n            \"createdAt\": \"2023-06-05T07:42:00.285Z\",\n            \"updatedAt\": \"2023-06-05T07:42:00.285Z\"\n        },\n        {\n            \"id\": 1,\n            \"year\": \"2024\",\n            \"createdAt\": \"2023-06-05T04:49:07.603Z\",\n            \"updatedAt\": \"2023-06-05T08:03:50.581Z\"\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
-			],
-			"description": "GET request berisi semua method request GET"
+			]
 		},
 		{
 			"name": "Post Request",
@@ -558,20 +565,21 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/auth",
+							"raw": "http://localhost:8000/auth/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"auth"
+								"auth",
+								"login"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "http://localhost:8000/auth",
+							"name": "http://localhost:8000/auth/login",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],

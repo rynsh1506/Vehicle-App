@@ -30,3 +30,20 @@ exports.authentication = async (req, res, next) => {
         res.status(500).json({ message: "Internal server error" });
     }
 };
+
+exports.logout = async (req, res, next) => {
+    try {
+        res.cookie("token", null, {
+            expires: new Date(Date.now()),
+            httpOnly: true,
+        });
+
+        res.status(200).json({
+            success: true,
+            message: "Logged out successfully",
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+};
