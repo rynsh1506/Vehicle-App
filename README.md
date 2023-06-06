@@ -15,5 +15,5 @@
 
 ## Catatan
 1. Untuk system logout masih menggunakan system clear cookie manual
-2. Dan pada saat `Create Vehicle Entities` anda bisa mengcoment field yang tidak ingin memasukan input tersebut ke database dan berlaku juga untuk `Update`
+2. Dan pada saat `Create Vehicle Entities` anda bisa `comment` field yang tidak ingin tambahkan lagi ke database dan berlaku juga untuk `Update`
 
