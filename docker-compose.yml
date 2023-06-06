@@ -6,6 +6,8 @@ services:
     build: .
     ports:
       - 8000:8000
+    depends_on:
+      - db
     volumes:
     - .:/usr/src/app
     - ./node_modules:/usr/src/app/node_modules
@@ -13,8 +15,7 @@ services:
     command: sh -c "npm install && npm start"
     env_file:
       - .env
-    depends_on:
-      - db
+    image: rynsh1506/vehicle_app
 
   db:
     container_name: postgres
