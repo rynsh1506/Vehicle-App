@@ -14,7 +14,7 @@
 11. Jika tidak ada masalah selamat anda berhasil menjalankan aplikasi 😊
 
 ## Catatan
-1. Dan pada saat `Create Vehicle Entities` anda bisa `comment` field yang tidak ingin di tambahkan lagi ke database dan berlaku juga untuk `Update`
+1. Pada saat `Create Vehicle Entities` anda bisa `comment` field yang tidak ingin di tambahkan lagi ke database dan berlaku juga untuk `Update`
 2. Dan juga jika ingin memasukan data satu persatu diharuskan menggikuti urutan `Field` dari atas kebawah
 3. Untuk update dan delete user harus dilakukan oleh user yang id nya sama yang sedang login atau isAdmin `true`
 4. Untuk update jika user isAdmin `false` maka tidak dapat Access untuk `Update Field` isAdmin
