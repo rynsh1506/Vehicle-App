@@ -5,17 +5,19 @@
 1. Clone repositori ini ke mesin Anda.
 2. Buka terminal dan arahkan ke direktori repositori.
 3. Jalankan perintah `npm/yarn install` untuk menginstal semua dependensi.
-4. Setup database dan enviroment docker sesuaikan di file `.env`
-5. Sync di database model di `src/config/syncDatabase.js` buka commentar
+4. Konfigurasikan database dan environment Docker pada file `.env` sesuai kebutuhan.
+5. Hapus komentar pada sinkronisasi model database di `src/config/syncDatabase.js`.
 6. Setelah instalasi selesai, jalankan perintah `npm/yarn start` untuk menjalankan aplikasi.
-8. Jika menggunakan Docker Hapus/Sesuaikan image di `docker.compose.yml dan Dockerfile` jika dibutuhkan
-9. Dan jalankan perintah `docker compose up || docker compose -f docker.compose.yml up || npm run docker`
-10. Saat menjalankan di postman nyalakan fitur `sync cookies` dan `clear` all cookies 
-11. Jika tidak ada masalah selamat anda berhasil menjalankan aplikasi 😊
+7. Jika menggunakan Docker, sesuaikan atau hapus gambar pada file `docker.compose.yml` dan `Dockerfile` jika diperlukan.
+8. Jalankan perintah `docker compose up || docker compose -f docker.compose.yml up || npm run docker`.
+9. Saat menggunakan Postman, aktifkan fitur `sync cookies` dan `clear all cookies`.
+10. Jika tidak ada masalah, selamat! Anda berhasil menjalankan aplikasi. 😊
 
 ## Catatan
-1. Pada saat `Create Vehicle Entities` anda bisa `comment` field yang tidak ingin di tambahkan lagi ke database dan berlaku juga untuk `update`
-2. Dan juga jika ingin memasukan data satu persatu diharuskan menggikuti urutan `field` dari atas kebawah
-3. Untuk update dan delete user harus dilakukan oleh user yang id nya sama dengan user yang sedang login atau isAdmin `true`
-4. Untuk update jika user isAdmin `false` maka tidak dapat Access untuk `update field` isAdmin
+1. Pada proses `Create Vehicle Entities`, Anda dapat mengomentari field yang tidak ingin ditambahkan ke database. Hal ini juga berlaku untuk proses `update`.
+2. Jika ingin memasukkan data satu per satu, pastikan mengikuti urutan field dari atas ke bawah.
+3. Untuk mengupdate dan menghapus pengguna, itu harus dilakukan oleh pengguna dengan ID yang sama dengan pengguna yang sedang login atau oleh admin dengan `isAdmin` bernilai `true`.
+4. Pada proses update, jika pengguna memiliki `isAdmin` bernilai `false`, mereka tidak dapat mengakses field `isAdmin` untuk diupdate.
+
+Silakan bebas untuk melakukan perbaikan tambahan pada dokumentasi ini agar terlihat lebih profesional dan sesuai dengan aplikasi spesifik Anda.
 
