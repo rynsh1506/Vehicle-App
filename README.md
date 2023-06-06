@@ -8,7 +8,7 @@
 4. Konfigurasikan database dan environment Docker pada file `.env` sesuai kebutuhan.
 5. Hapus komentar pada sinkronisasi model database di `src/config/syncDatabase.js`.
 6. Setelah instalasi selesai, jalankan perintah `npm/yarn start` untuk menjalankan aplikasi.
-7. Jika menggunakan Docker, sesuaikan atau hapus gambar pada file `docker.compose.yml` dan `Dockerfile` jika diperlukan.
+7. Jika menggunakan Docker, sesuaikan atau hapus image pada file `docker.compose.yml` dan `Dockerfile` jika diperlukan.
 8. Jalankan perintah `docker compose up || docker compose -f docker.compose.yml up || npm run docker`.
 9. Saat menggunakan Postman, aktifkan fitur `sync cookies` dan `clear all cookies`.
 10. Jika tidak ada masalah, selamat! Anda berhasil menjalankan aplikasi. 😊
