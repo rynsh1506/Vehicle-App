@@ -2,7 +2,8 @@ const User = require("../models/user");
 const ErrorHandler = require("../utils/ErrorHandler");
 const bcrypt = require("bcryptjs");
 const sendToken = require("../utils/jwtToken");
-const models = require("../models");
+const models = require("../models/index");
+const { Op } = require("sequelize");
 
 // Retrieve all users
 exports.getAllUsers = async (req, res, next) => {
@@ -40,19 +41,18 @@ exports.getAllUsers = async (req, res, next) => {
 
 // Retrieve user by ID
 exports.getUserById = async (req, res, next) => {
-    const userId = req.params.id;
-
     try {
-        const user = await User.findByPk(userId);
+        const { username } = req.params;
+        const user = await User.findOne({ where: { username } });
 
         if (!user) {
             return next(new ErrorHandler("User not found", 404));
         }
 
-        const { dataValues } = user;
-        delete dataValues.password;
+        const { sanitizedUsers } = user;
+        delete sanitizedUsers.password;
 
-        res.json(dataValues);
+        res.json(sanitizedUsers);
     } catch (error) {
         res.status(500).json({ error: "Failed to retrieve user" });
     }
@@ -60,21 +60,26 @@ exports.getUserById = async (req, res, next) => {
 
 // Create a new user
 exports.createUser = async (req, res, next) => {
-    const { email, password, isAdmin } = req.body;
-
     try {
+        const { email, username, password, isAdmin } = req.body;
+        const regex = /^[a-zA-Z0-9_]{4,}$/;
         const user = await User.findOne({
-            where: { email },
+            where: { email, username },
         });
 
+        if (!regex.test(username)) {
+            return next(new ErrorHandler("Invalid username format", 400));
+        }
+
         if (user) {
-            return next(new ErrorHandler("User already exists", 400));
+            return next(new ErrorHandler("User and Email already exists", 400));
         }
 
         const hashPassword = await bcrypt.hash(password, 10);
 
         const newUser = await User.create({
             email,
+            username,
             password: hashPassword,
             isAdmin,
         });
@@ -84,23 +89,23 @@ exports.createUser = async (req, res, next) => {
     }
 };
 
-// Update user by ID
+// Update user by Username
 exports.updateUser = async (req, res, next) => {
-    const userId = parseInt(req.params.id);
-    const currenEmail = req.user.email;
-    const { email, password, isAdmin } = req.body;
-
     try {
+        const usernameParam = req.params.username;
+        const currentEmail = req.user.email;
+        const { email, username, password, isAdmin } = req.body;
+
         const currentUser = await User.findOne({
-            where: { email: currenEmail },
+            where: { email: currentEmail },
         });
 
         if (!currentUser) {
             return next(new ErrorHandler("User not found", 404));
         }
 
-        // cek user isAdmin/user itu sendiri yang sedang login
-        if (!currentUser.isAdmin && userId !== currentUser.id) {
+        // Cek user isAdmin/user itu sendiri yang sedang login
+        if (!currentUser.isAdmin && usernameParam !== currentUser.username) {
             return next(
                 new ErrorHandler(
                     "Access denied. Only admins or the user themselves can perform this action.",
@@ -109,41 +114,53 @@ exports.updateUser = async (req, res, next) => {
             );
         }
 
-        // Cek apa email sudah ada yang pakai
+        // Cek apakah email atau username sudah ada dalam database (kecuali untuk pengguna saat ini)
         const existingUser = await User.findOne({
-            where: { email },
+            where: {
+                [Op.and]: [
+                    { email: { [Op.ne]: currentEmail } },
+                    { [Op.or]: [{ email }, { username }] },
+                ],
+            },
         });
 
-        if (existingUser && existingUser.id !== userId) {
-            return next(new ErrorHandler("Email is already in use", 400));
+        if (existingUser) {
+            return next(
+                new ErrorHandler("Email or Username is already in use", 400)
+            );
         }
 
         const hashPassword = await bcrypt.hash(password, 10);
 
         const updateFields = {
             email,
+            username,
             password: hashPassword,
         };
 
         // Hanya jika currentUser adalah admin, izinkan perubahan kolom isAdmin
-        if (!currentUser.isAdmin) {
+        if (currentUser.isAdmin) {
+            updateFields.isAdmin = isAdmin;
+        } else {
             return next(
                 new ErrorHandler(
                     "Access denied. Only admins have access to this feature.",
                     403
                 )
             );
-        } else {
-            updateFields.isAdmin = isAdmin;
         }
 
         await User.update(updateFields, {
-            where: { id: userId },
+            where: { id: currentUser.id },
         });
 
         const updatedUser = await User.findOne({
-            where: { id: userId },
+            where: { username },
         });
+
+        if (!updatedUser) {
+            return next(new ErrorHandler("Failed to update user", 500));
+        }
 
         sendToken(updatedUser, 200, res);
     } catch (error) {
@@ -153,7 +170,7 @@ exports.updateUser = async (req, res, next) => {
 
 // Delete user by ID
 exports.deleteUser = async (req, res, next) => {
-    const userId = parseInt(req.params.id);
+    const username = req.params.username;
     const { email } = req.user;
 
     try {
@@ -163,11 +180,11 @@ exports.deleteUser = async (req, res, next) => {
             return next(new ErrorHandler("User not found", 404));
         }
 
-        if (!currentUser.isAdmin && userId !== currentUser.id) {
+        if (!currentUser.isAdmin && username !== currentUser.username) {
             return next(new ErrorHandler("Unauthorized access", 401));
         }
 
-        const result = await User.destroy({ where: { id: userId } });
+        const result = await User.destroy({ where: { id: currentUser.id } });
 
         if (!result) {
             return next(new ErrorHandler("User not found", 404));

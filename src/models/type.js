@@ -1,14 +1,34 @@
-const { DataTypes } = require("sequelize");
+const { DataTypes, Sequelize } = require("sequelize");
 const db = require("../config/dbconection");
+const Brand = require("./brand");
 
 const Type = db.define("types", {
+    id: {
+        type: DataTypes.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        primaryKey: true,
+    },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    brand_id: {
-        type: DataTypes.INTEGER,
+    brand_name: {
+        type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+            async validateBrandExists(value) {
+                const brand = await Brand.findOne({ where: { name: value } });
+                if (!brand) throw new Error("Brand does not exist");
+            },
+        },
+    },
+    brand_id: {
+        type: DataTypes.UUID,
+        allowNull: false,
+        references: {
+            model: "brands",
+            key: "id",
+        },
     },
 });
 
