@@ -8,7 +8,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 app.use(cookieParser({}));
-app.use("/", (req, res) => {
+app.use("/test", (req, res) => {
     res.send("<h1>Selamat Datang Di Vehicle App by:Muhammad Riyansyah</h1>");
 });
 
