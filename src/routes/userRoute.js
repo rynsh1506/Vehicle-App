@@ -6,8 +6,8 @@ const { isAuthenticated } = require("../middleware/auth");
 // Retrieve all users
 router.get("/", isAuthenticated, userController.getAllUsers);
 
-// Retrieve user by ID
-router.get("/:username", isAuthenticated, userController.getUserById);
+// Retrieve user by username
+router.get("/:username", isAuthenticated, userController.getUserByUsername);
 
 // Create a new user
 router.post("/", userController.createUser);

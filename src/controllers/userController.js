@@ -39,20 +39,20 @@ exports.getAllUsers = async (req, res, next) => {
     }
 };
 
-// Retrieve user by ID
-exports.getUserById = async (req, res, next) => {
+// Retrieve user by username
+exports.getUserByUsername = async (req, res, next) => {
     try {
-        const { username } = req.params;
+        const username = req.params.username;
         const user = await User.findOne({ where: { username } });
 
         if (!user) {
             return next(new ErrorHandler("User not found", 404));
         }
 
-        const { sanitizedUsers } = user;
-        delete sanitizedUsers.password;
+        const { dataValues } = user;
+        delete dataValues.password;
 
-        res.json(sanitizedUsers);
+        res.status(200).json({ dataValues });
     } catch (error) {
         res.status(500).json({ error: "Failed to retrieve user" });
     }
