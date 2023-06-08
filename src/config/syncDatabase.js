@@ -2,7 +2,7 @@ const sequelize = require("./dbconection");
 
 const syncDatabase = async () => {
     try {
-        await sequelize.sync({ force: true });
+        await sequelize.sync({ alter: true });
 
         console.log("Sinkronisasi tabel berhasil.");
     } catch (error) {
