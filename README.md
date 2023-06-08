@@ -28,3 +28,4 @@ Aplikasi Vehicle App adalah aplikasi untuk menajement data kendaraan dengan fitu
 4. Mengubah parameter `id` pada `POST, PATCH, DELETE` Vehicle menjadi contoh: `http://localhost:8000/vehicle/type/SUV/Toyota`, DLL
 5. Mengubah query pada request `GET` Vehicle menjadi `http://localhost:8000/vehicle/vehicle-types?brand_name=Toyota`, DLL
 6. Memperbaiki documentasi di postman
+7. Aplikasi sudah di deploy ke link https://vehicle-app-production.up.railway.app
