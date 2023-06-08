@@ -15,13 +15,13 @@ Aplikasi Vehicle App adalah aplikasi untuk menajement data kendaraan dengan fitu
 9. Jika tidak ada masalah, selamat! Anda berhasil menjalankan aplikasi. 😊
 
 ## Catatan
-1. Pada proses `Create Vehicle Entities`, Anda dapat mengomentari field yang tidak ingin ditambahkan ke database. Hal ini juga berlaku untuk proses `update`.
-2. Jika ingin memasukkan data satu per satu, pastikan mengikuti urutan field dari atas ke bawah.
-3. Untuk mengupdate dan menghapus pengguna, itu harus dilakukan oleh pengguna dengan ID yang sama dengan pengguna yang sedang login atau oleh otoritas dengan `isAdmin` yang bernilai `true`.
-4. Pada proses update, jika pengguna yang memiliki `isAdmin` bernilai `false`, mereka tidak dapat mengakses field `isAdmin` untuk diupdate.
-5. Sangat disarankan untuk menunggu proses `syncronisasi` model database terlebih dahulu agar tidak terjadi error pada aplikasi.
+
+1. Untuk mengupdate dan menghapus pengguna, itu harus dilakukan oleh pengguna dengan ID yang sama dengan pengguna yang sedang login atau oleh otoritas dengan `isAdmin` yang bernilai `true`.
+2. Pada proses update, jika pengguna yang memiliki `isAdmin` bernilai `false`, mereka tidak dapat mengakses field `isAdmin` untuk diupdate.
+3. Sangat disarankan untuk menunggu proses `syncronisasi` model database terlebih dahulu agar tidak terjadi error pada aplikasi.
 
 ## Update
+
 1. Mengubah desain model database 
 2. Mengubah parameter `id` pada `POST, GET, PATCH, DELETE` Users dengan `username`
 3. Memisahkan entripoin untuk `POST, GET, PATCH, DELETE` pada Vehicle
