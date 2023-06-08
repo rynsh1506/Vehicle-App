@@ -16,12 +16,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/users?limit=10&page=1",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/users?limit=10&page=1",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"users"
 							],
@@ -114,6 +116,76 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"d8b6e369-1e99-456e-9b2e-fa8a1cf09524\",\n            \"username\": \"example123\",\n            \"email\": \"example@seru.com\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2023-06-08T01:52:03.545Z\",\n            \"updatedAt\": \"2023-06-08T01:52:03.545Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/users?limit=10&page=1",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "230"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"e6-xxqdugcdOlCxEMy+5GzbD55rB5o\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:49:24 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"3e8d2649-a3f7-4bfd-8f9c-a46fa2ffa508\",\n            \"username\": \"example123\",\n            \"email\": \"example@seru.com\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2023-06-08T13:34:47.992Z\",\n            \"updatedAt\": \"2023-06-08T13:37:29.048Z\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -123,12 +195,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/users/example123",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/users/example123",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"users",
 								"example123"
@@ -137,7 +211,7 @@
 					},
 					"response": [
 						{
-							"name": "http://localhost:8000/user/:id",
+							"name": "Get User By Username",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -193,6 +267,62 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"id\": 3,\n    \"email\": \"example@seru.com\",\n    \"isAdmin\": true,\n    \"createdAt\": \"2023-06-04T14:28:38.612Z\",\n    \"updatedAt\": \"2023-06-04T22:37:17.867Z\"\n}"
+						},
+						{
+							"name": "Get User By Username",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/users/example123",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"users",
+										"example123"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "204"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"cc-losllHK6a4UdS8q+UbwMF/6BV0I\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:41:32 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"dataValues\": {\n        \"id\": \"ae6df1d3-fd9e-4ba9-9a1a-776e09dfd972\",\n        \"username\": \"example123\",\n        \"email\": \"example@seru.com\",\n        \"isAdmin\": true,\n        \"createdAt\": \"2023-06-08T14:39:25.291Z\",\n        \"updatedAt\": \"2023-06-08T14:39:25.291Z\"\n    }\n}"
 						}
 					]
 				},
@@ -202,12 +332,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/vehicle/vehicle-brands?name=Lamborgini",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/vehicle-brands?name=Lamborgini",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"vehicle-brands"
@@ -284,6 +416,68 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"3b9e68be-675a-4ab6-9e0c-adc47e9f7119\",\n            \"name\": \"Toyota\",\n            \"createdAt\": \"2023-06-08T07:55:27.078Z\",\n            \"updatedAt\": \"2023-06-08T07:55:27.078Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get Vehicle brand by name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/vehicle-brands?name=Lamborgini",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"vehicle-brands"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lamborgini"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "184"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"b8-G1swGsIRTtadyvb1EspxRr2tk9M\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:50:58 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"24a58308-ff37-40b3-b58b-7a2ae101e335\",\n            \"name\": \"Lamborgini\",\n            \"createdAt\": \"2023-06-08T13:39:05.131Z\",\n            \"updatedAt\": \"2023-06-08T13:42:53.452Z\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -293,12 +487,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/vehicle/vehicle-types?brand_name=Toyota",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/vehicle-types?brand_name=Lamborgini",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"vehicle-types"
@@ -306,7 +502,7 @@
 							"query": [
 								{
 									"key": "brand_name",
-									"value": "Toyota"
+									"value": "Lamborgini"
 								}
 							]
 						}
@@ -375,6 +571,68 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"480056a8-b4b4-4a59-bf17-f0c308a53657\",\n            \"name\": \"SUV\",\n            \"brand_name\": \"Toyota\",\n            \"brand_id\": \"3b9e68be-675a-4ab6-9e0c-adc47e9f7119\",\n            \"createdAt\": \"2023-06-08T07:57:30.654Z\",\n            \"updatedAt\": \"2023-06-08T07:57:30.654Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get Vehicle type by brand_name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/vehicle-types?brand_name=Lamborgini",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"vehicle-types"
+									],
+									"query": [
+										{
+											"key": "brand_name",
+											"value": "Lamborgini"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "255"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ff-Ikk3s4bYzc/pJeQGEi92QtQCKHg\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:51:33 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"cf974b3a-612e-42ad-a8cc-e571f289b006\",\n            \"name\": \"Sport\",\n            \"brand_name\": \"Lamborgini\",\n            \"brand_id\": \"24a58308-ff37-40b3-b58b-7a2ae101e335\",\n            \"createdAt\": \"2023-06-08T13:40:22.174Z\",\n            \"updatedAt\": \"2023-06-08T13:43:24.429Z\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -384,12 +642,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/vehicle/vehicle-models?type_name=SUV",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/vehicle-models?type_name=Sport",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"vehicle-models"
@@ -397,7 +657,7 @@
 							"query": [
 								{
 									"key": "type_name",
-									"value": "SUV"
+									"value": "Sport"
 								}
 							]
 						}
@@ -466,6 +726,68 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"a23b1006-6e90-4d5b-b219-38fdada3e394\",\n            \"name\": \"Avanza\",\n            \"type_name\": \"SUV\",\n            \"type_id\": \"480056a8-b4b4-4a59-bf17-f0c308a53657\",\n            \"createdAt\": \"2023-06-08T07:59:59.205Z\",\n            \"updatedAt\": \"2023-06-08T07:59:59.205Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get Vehicle model by type_name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/vehicle-models?type_name=Sport",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"vehicle-models"
+									],
+									"query": [
+										{
+											"key": "type_name",
+											"value": "Sport"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "252"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"fc-o3lRa86yLwFM02+tQod+XdCdABg\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:51:59 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"5de913c2-645e-427e-a565-fad1a41a02ad\",\n            \"name\": \"Aventador\",\n            \"type_name\": \"Sport\",\n            \"type_id\": \"cf974b3a-612e-42ad-a8cc-e571f289b006\",\n            \"createdAt\": \"2023-06-08T13:41:39.401Z\",\n            \"updatedAt\": \"2023-06-08T13:44:18.122Z\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -475,12 +797,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/vehicle/vehicle-prices?model_name=Avanza&year=2001",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/vehicle-prices?model_name=Aventador&year=2023",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"vehicle-prices"
@@ -488,11 +812,11 @@
 							"query": [
 								{
 									"key": "model_name",
-									"value": "Avanza"
+									"value": "Aventador"
 								},
 								{
 									"key": "year",
-									"value": "2001"
+									"value": "2023"
 								}
 							]
 						}
@@ -565,6 +889,72 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"087b14e2-5b6a-4f7d-8a05-8ac0014a3ce3\",\n            \"price\": \"100000000\",\n            \"model_name\": \"Avanza\",\n            \"year\": \"2001\",\n            \"model_id\": \"a23b1006-6e90-4d5b-b219-38fdada3e394\",\n            \"year_id\": \"38cbf5ca-7018-4986-a875-57d204d14f6d\",\n            \"createdAt\": \"2023-06-08T08:04:18.841Z\",\n            \"updatedAt\": \"2023-06-08T08:04:18.841Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get Vehicle model by model_name and year",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/vehicle-prices?model_name=Aventador&year=2023",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"vehicle-prices"
+									],
+									"query": [
+										{
+											"key": "model_name",
+											"value": "Aventador"
+										},
+										{
+											"key": "year",
+											"value": "2023"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "324"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"144-EeRaUyd3BGCyJPhpAQLPeSqjxpk\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:53:05 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 1,\n    \"limit\": 10,\n    \"skip\": 0,\n    \"data\": [\n        {\n            \"id\": \"5f4b8466-dd22-445c-b669-b99cdcc59108\",\n            \"price\": \"20000000000\",\n            \"model_name\": \"Aventador\",\n            \"year\": \"2023\",\n            \"model_id\": \"5de913c2-645e-427e-a565-fad1a41a02ad\",\n            \"year_id\": \"f36340d9-90ee-4efb-a8cf-a2968f5cffa0\",\n            \"createdAt\": \"2023-06-08T13:41:43.056Z\",\n            \"updatedAt\": \"2023-06-08T13:45:51.442Z\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -574,12 +964,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/auth/logout",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/auth/logout",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"auth",
 								"logout"
@@ -648,6 +1040,66 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"message\": \"Logged out successfully\"\n}"
+						},
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/auth/logout",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "set-cookie",
+									"value": "token=j%3Anull; Path=/; Expires=Thu, 08 Jun 2023 13:54:38 GMT; HttpOnly"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "52"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"34-RTw5tHxjaaqEcEVbesn1aQCzRls\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:54:38 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Logged out successfully\"\n}"
 						}
 					]
 				}
@@ -671,12 +1123,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/auth/login",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/auth/login",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"auth",
 								"login"
@@ -754,6 +1208,75 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"user\": {\n        \"id\": \"0f7a762c-a570-4fa6-bf92-44a73f347282\",\n        \"username\": \"example123\",\n        \"email\": \"example@seru.com\",\n        \"password\": \"$2a$10$fOmPgkUjr6d7x7D00lWiJehzQfA932ghe3QI42GNLPMhWb4JPhonq\",\n        \"isAdmin\": true,\n        \"createdAt\": \"2023-06-08T02:19:23.026Z\",\n        \"updatedAt\": \"2023-06-08T02:19:23.026Z\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAc2VydS5jb20iLCJpYXQiOjE2ODYxOTA3ODV9.blaaFVVcWfhgSXMFqukwQv5TTEm8NKAErnXYAMV_6HA\"\n}"
+						},
+						{
+							"name": "Auth/Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"example@seru.com\",\r\n    \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/auth/login",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "set-cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAc2VydS5jb20iLCJpYXQiOjE2ODYyMzI0OTB9.eiMH9iaXj5T5l9RyqAhVRs5Osv9veFFFr5Ba1soXl4w; Path=/; Expires=Wed, 06 Sep 2023 13:54:50 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "439"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1b7-GLHOQQRQRsyXzWCCsTFqkqw9hNU\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:54:50 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"user\": {\n        \"id\": \"635c4044-bca4-41b6-9212-ac845bf49a33\",\n        \"username\": \"example123\",\n        \"email\": \"example@seru.com\",\n        \"password\": \"$2a$10$j7l5ZAo5dqKMz0Xo8e5HSOKp5ahmxT.smHJNEUQRk.BtN8I3R3URm\",\n        \"isAdmin\": true,\n        \"createdAt\": \"2023-06-08T13:54:11.060Z\",\n        \"updatedAt\": \"2023-06-08T13:54:11.060Z\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAc2VydS5jb20iLCJpYXQiOjE2ODYyMzI0OTB9.eiMH9iaXj5T5l9RyqAhVRs5Osv9veFFFr5Ba1soXl4w\"\n}"
 						}
 					]
 				},
@@ -783,12 +1306,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/users",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"users"
 							]
@@ -796,7 +1321,7 @@
 					},
 					"response": [
 						{
-							"name": "Contoh create user",
+							"name": "Create New user",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -860,6 +1385,70 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"id\": \"d8b6e369-1e99-456e-9b2e-fa8a1cf09524\",\n    \"email\": \"example@seru.com\",\n    \"username\": \"example123\",\n    \"password\": \"$2a$10$4VL134N9Gw0Mz/vaJ30V1enMrvF/bI5gLmjfMJ40hvTxuGq0Rri6G\",\n    \"isAdmin\": true,\n    \"updatedAt\": \"2023-06-08T01:52:03.545Z\",\n    \"createdAt\": \"2023-06-08T01:52:03.545Z\"\n}"
+						},
+						{
+							"name": "Create New User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"example@seru.com\",\r\n    \"username\": \"example123\",\r\n    \"password\": \"123\",\r\n    \"isAdmin\" : true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/users",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "263"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"107-KKEyrMgeQDBqVMRZN0lg35iAFFs\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:39:25 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"ae6df1d3-fd9e-4ba9-9a1a-776e09dfd972\",\n    \"email\": \"example@seru.com\",\n    \"username\": \"example123\",\n    \"password\": \"$2a$10$25FaUqloeqU9ZBI.r2rXbuOjs35D75or8yrLnGau61hxBOtUj44A2\",\n    \"isAdmin\": true,\n    \"updatedAt\": \"2023-06-08T14:39:25.291Z\",\n    \"createdAt\": \"2023-06-08T14:39:25.291Z\"\n}"
 						}
 					]
 				},
@@ -878,12 +1467,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/brand",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/brand",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"brand"
@@ -892,7 +1483,7 @@
 					},
 					"response": [
 						{
-							"name": "Contoh  create new brand",
+							"name": "Create new brand",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -957,6 +1548,71 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Brand created successfully\",\n    \"newBrand\": {\n        \"id\": \"0b95b600-8dfe-472a-a8d7-faf0c707f8b6\",\n        \"name\": \"Toyota\",\n        \"updatedAt\": \"2023-06-07T23:18:28.856Z\",\n        \"createdAt\": \"2023-06-07T23:18:28.856Z\"\n    }\n}"
+						},
+						{
+							"name": "Create new brand",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Toyota\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/brand",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"brand"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "191"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"bf-R2hmgbBDqYdZ69MmezMaBBOtyD4\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:06:19 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Brand created successfully\",\n    \"newBrand\": {\n        \"id\": \"6238ef89-c273-4dcb-8418-d201ad1cb5d5\",\n        \"name\": \"Toyota\",\n        \"updatedAt\": \"2023-06-08T14:06:19.320Z\",\n        \"createdAt\": \"2023-06-08T14:06:19.320Z\"\n    }\n}"
 						}
 					]
 				},
@@ -975,12 +1631,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/year",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/year",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"year"
@@ -989,7 +1647,7 @@
 					},
 					"response": [
 						{
-							"name": "Contoh create new year",
+							"name": "Create new year",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -1054,6 +1712,71 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Year created successfully\",\n    \"newYear\": {\n        \"id\": \"ed790ae8-3c28-4453-bf52-2801b6b5df9e\",\n        \"year\": \"2012\",\n        \"updatedAt\": \"2023-06-07T23:19:27.861Z\",\n        \"createdAt\": \"2023-06-07T23:19:27.861Z\"\n    }\n}"
+						},
+						{
+							"name": "Create new year",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"year\": \"2001\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/year",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"year"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "187"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"bb-bRNEHbI2TtwefGbqUcDqNg0iQVA\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:40:22 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Year created successfully\",\n    \"newYear\": {\n        \"id\": \"cf80b462-4a00-4a33-9283-f56293579fc0\",\n        \"year\": \"2001\",\n        \"updatedAt\": \"2023-06-08T14:40:22.196Z\",\n        \"createdAt\": \"2023-06-08T14:40:22.196Z\"\n    }\n}"
 						}
 					]
 				},
@@ -1072,12 +1795,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/type",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/type",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"type"
@@ -1086,7 +1811,7 @@
 					},
 					"response": [
 						{
-							"name": "Contoh create new type",
+							"name": "Create new type",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -1151,6 +1876,71 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Type created successfully\",\n    \"newType\": {\n        \"id\": \"d456e940-78c1-44ac-9ff6-6c4cb9f364fe\",\n        \"name\": \"SUV\",\n        \"brand_name\": \"Toyota\",\n        \"brand_id\": \"0b95b600-8dfe-472a-a8d7-faf0c707f8b6\",\n        \"updatedAt\": \"2023-06-07T23:20:03.126Z\",\n        \"createdAt\": \"2023-06-07T23:20:03.126Z\"\n    }\n}"
+						},
+						{
+							"name": "Create new type",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"SUV\",\r\n    \"brand_name\": \"Toyota\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/type",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"type"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "258"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"102-0UyJhVaeD1pUHj/OnnXd9YGoVEQ\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:06:36 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Type created successfully\",\n    \"newType\": {\n        \"id\": \"b348f27e-2349-418e-ac57-253a86f7388c\",\n        \"name\": \"SUV\",\n        \"brand_name\": \"Toyota\",\n        \"brand_id\": \"6238ef89-c273-4dcb-8418-d201ad1cb5d5\",\n        \"updatedAt\": \"2023-06-08T14:06:36.131Z\",\n        \"createdAt\": \"2023-06-08T14:06:36.131Z\"\n    }\n}"
 						}
 					]
 				},
@@ -1169,12 +1959,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/model",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/model",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"model"
@@ -1183,7 +1975,7 @@
 					},
 					"response": [
 						{
-							"name": "Contoh create new model",
+							"name": "Create new model",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -1248,6 +2040,71 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Model created successfully\",\n    \"newModel\": {\n        \"id\": \"a54685a7-8bb8-44a4-a592-4adc1c793023\",\n        \"name\": \"Avanza\",\n        \"type_name\": \"SUV\",\n        \"type_id\": \"d456e940-78c1-44ac-9ff6-6c4cb9f364fe\",\n        \"updatedAt\": \"2023-06-07T23:20:48.574Z\",\n        \"createdAt\": \"2023-06-07T23:20:48.574Z\"\n    }\n}"
+						},
+						{
+							"name": "Create new model",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Aventador\",\r\n    \"type_name\": \"Sport\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/model",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"model"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "263"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"107-BheiAhsrDFiVRT73E+dfB5k/ZOs\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:01:35 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Model created successfully\",\n    \"newModel\": {\n        \"id\": \"f85a1ddd-5c9e-4984-8314-2dce70836dc6\",\n        \"name\": \"Aventador\",\n        \"type_name\": \"Sport\",\n        \"type_id\": \"89ad87a1-4d9c-4497-bd63-8457171dd520\",\n        \"updatedAt\": \"2023-06-08T14:01:35.753Z\",\n        \"createdAt\": \"2023-06-08T14:01:35.753Z\"\n    }\n}"
 						}
 					]
 				},
@@ -1266,12 +2123,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/price",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/price",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"price"
@@ -1280,7 +2139,7 @@
 					},
 					"response": [
 						{
-							"name": "Contoh create new price",
+							"name": "Create new price",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -1345,6 +2204,71 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Price created successfully\",\n    \"newPrice\": {\n        \"id\": \"b7176be5-2ee1-4e48-b35f-8947ade07ff2\",\n        \"price\": \"100000000\",\n        \"model_name\": \"Avanza\",\n        \"year\": \"2001\",\n        \"model_id\": \"fe500916-9f51-4c45-8e25-78bfb0ce65f2\",\n        \"year_id\": \"40a7d46a-63de-45de-a325-f78f3d107520\",\n        \"updatedAt\": \"2023-06-08T02:21:28.794Z\",\n        \"createdAt\": \"2023-06-08T02:21:28.794Z\"\n    }\n}"
+						},
+						{
+							"name": "Create new price",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\": 100000000,\r\n    \"model_name\": \"Aventador\",\r\n    \"year\": \"2023\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/price",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"price"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "333"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"14d-Jn5IHaur+082jeL/gZwLXclWVIE\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:04:55 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Price created successfully\",\n    \"newPrice\": {\n        \"id\": \"bed32b03-7e65-4959-a81f-02026cfc2ee3\",\n        \"price\": \"100000000\",\n        \"model_name\": \"Aventador\",\n        \"year\": \"2023\",\n        \"model_id\": \"18e7d2ae-d76f-426d-ab25-4ea572386d0b\",\n        \"year_id\": \"f36340d9-90ee-4efb-a8cf-a2968f5cffa0\",\n        \"updatedAt\": \"2023-06-08T14:04:55.087Z\",\n        \"createdAt\": \"2023-06-08T14:04:55.087Z\"\n    }\n}"
 						}
 					]
 				}
@@ -1365,12 +2289,14 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8000/users/example123",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/users/example123",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"users",
 								"example123"
@@ -1441,6 +2367,68 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+						},
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/users/example123",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"users",
+										"example123"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "39"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"27-27o4zzUjhHNmthTJyia4gBCjpos\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:53:58 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
 						}
 					]
 				},
@@ -1450,22 +2438,24 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/vehicle/brand/Toyota",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/brand/Lamborgini",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"brand",
-								"Toyota"
+								"Lamborgini"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh delete vehicle brand",
+							"name": "Delete vehicle brand",
 							"originalRequest": {
 								"method": "DELETE",
 								"header": [],
@@ -1522,6 +2512,63 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Brand deleted successfully\"\n}"
+						},
+						{
+							"name": "Delete Vehicle brand",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/brand/Lamborgini",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"brand",
+										"Lamborgini"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "40"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"28-ikSQex9hcCKogS75gNRRH9svWgI\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:55:31 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Brand deleted successfully\"\n}"
 						}
 					]
 				},
@@ -1531,22 +2578,25 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/vehicle/type/",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/type/Sport/Lamborgini",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"type",
-								""
+								"Sport",
+								"Lamborgini"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh delete Vehicle type",
+							"name": "Delete Vehicle type",
 							"originalRequest": {
 								"method": "DELETE",
 								"header": [],
@@ -1604,6 +2654,64 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Type deleted successfully\"\n}"
+						},
+						{
+							"name": "Delete Vehicle type",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/type/Sport/Lamborgini",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"type",
+										"Sport",
+										"Lamborgini"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "39"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"27-82x3ncWtpdvmCb9ZE04fP26qV0w\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:57:40 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Type deleted successfully\"\n}"
 						}
 					]
 				},
@@ -1613,22 +2721,24 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/vehicle/model/",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/model/Aventador",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"model",
-								""
+								"Aventador"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh  delete vehicle model",
+							"name": "Delete vehicle model",
 							"originalRequest": {
 								"method": "DELETE",
 								"header": [],
@@ -1685,6 +2795,63 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Model deleted successfully\"\n}"
+						},
+						{
+							"name": "Delete Vehicle model",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/model/Aventador",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"model",
+										"Aventador"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "40"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"28-WWJqW75kIpBr2l43zW5wXiSlyfs\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:02:19 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Model deleted successfully\"\n}"
 						}
 					]
 				},
@@ -1694,22 +2861,25 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/vehicle/price/",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/price/Aventador/2023",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"price",
-								""
+								"Aventador",
+								"2023"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh delete vehicle price",
+							"name": "Delete vehicle price",
 							"originalRequest": {
 								"method": "DELETE",
 								"header": [],
@@ -1763,6 +2933,64 @@
 								{
 									"key": "Keep-Alive",
 									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Price deleted successfully\"\n}"
+						},
+						{
+							"name": "Delete Vehicle price",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/price/Aventador/2023",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"price",
+										"Aventador",
+										"2023"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "40"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"28-MhgZjZKSczCfkrkoFO/V4dZb0c4\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 14:05:30 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
 								}
 							],
 							"cookie": [],
@@ -1835,12 +3063,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/users/example123",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/users/example123",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"users",
 								"example123"
@@ -1879,6 +3109,75 @@
 							"header": null,
 							"cookie": [],
 							"body": null
+						},
+						{
+							"name": "Update User",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"example@seru.com\",\r\n    \"username\": \"example123\",\r\n    \"password\": \"example\",\r\n    \"isAdmin\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/users/example123",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"users",
+										"example123"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "set-cookie",
+									"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAc2VydS5jb20iLCJpYXQiOjE2ODYyMzE0NDl9.HjYAtZjzt62cJc_yDT0jfUY9UJHnVrNs3hW-114exY8; Path=/; Expires=Wed, 06 Sep 2023 13:37:29 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "439"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1b7-NX4IsiReZByDDrD4k0J5tHqTi28\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:37:29 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"user\": {\n        \"id\": \"3e8d2649-a3f7-4bfd-8f9c-a46fa2ffa508\",\n        \"username\": \"example123\",\n        \"email\": \"example@seru.com\",\n        \"password\": \"$2a$10$xLZ/WJGPiLVLGqrz.bvqYeLsa34GMo2Fxjdxe9fwYEWQhQ9uHHW.2\",\n        \"isAdmin\": true,\n        \"createdAt\": \"2023-06-08T13:34:47.992Z\",\n        \"updatedAt\": \"2023-06-08T13:37:29.048Z\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAc2VydS5jb20iLCJpYXQiOjE2ODYyMzE0NDl9.HjYAtZjzt62cJc_yDT0jfUY9UJHnVrNs3hW-114exY8\"\n}"
 						}
 					]
 				},
@@ -1897,21 +3196,24 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/brand/Toyota",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
-								""
+								"brand",
+								"Toyota"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh update vehicle brand",
+							"name": "Update vehicle brand",
 							"originalRequest": {
 								"method": "PATCH",
 								"header": [],
@@ -1977,6 +3279,72 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Model updated successfully\"\n}"
+						},
+						{
+							"name": "Update vehicle brand",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newName\": \"Lamborgini\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/brand/Toyota",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"brand",
+										"Toyota"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "40"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"28-AktQjlDXm8mulZdlxe90EZLM7tA\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:42:53 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Brand updated successfully\"\n}"
 						}
 					]
 				},
@@ -1995,22 +3363,25 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/type/",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/type/SUV/Lamborgini",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"type",
-								""
+								"SUV",
+								"Lamborgini"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh update vehicle type",
+							"name": "Update vehicle type",
 							"originalRequest": {
 								"method": "PATCH",
 								"header": [],
@@ -2077,6 +3448,73 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Type updated successfully\"\n}"
+						},
+						{
+							"name": "Update vehicle type",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newName\": \"Sport\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/type/SUV/Lamborgini",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"type",
+										"SUV",
+										"Lamborgini"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "39"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"27-uNEQI7xwerfMzULz0OugXkmkeH4\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:43:24 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Type updated successfully\"\n}"
 						}
 					]
 				},
@@ -2095,22 +3533,24 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/model/",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/model/Avanza",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"model",
-								""
+								"Avanza"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh update vehicle model",
+							"name": "Update vehicle model",
 							"originalRequest": {
 								"method": "PATCH",
 								"header": [],
@@ -2176,6 +3616,72 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Model updated successfully\"\n}"
+						},
+						{
+							"name": "Update vehicle model",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newName\": \"Aventador\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/model/Avanza",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"model",
+										"Avanza"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "40"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"28-MxzXVXq3RckNTGyr8pFBK2SlhlM\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:44:18 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Model updated successfully\"\n}"
 						}
 					]
 				},
@@ -2194,22 +3700,25 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/price/",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/price/Aventador/2001",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"price",
-								""
+								"Aventador",
+								"2001"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh update vehicle price",
+							"name": "Update vehicle price",
 							"originalRequest": {
 								"method": "PATCH",
 								"header": [],
@@ -2276,6 +3785,73 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Price updated successfully\"\n}"
+						},
+						{
+							"name": "Update vehicle price",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newPrice\": 20000000000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/price/Aventador/2001",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"price",
+										"Aventador",
+										"2001"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "40"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"28-8BsPF87EHMaL3sdsyJNWcQutn1Y\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:45:04 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Price updated successfully\"\n}"
 						}
 					]
 				},
@@ -2294,22 +3870,25 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/vehicle/year/",
-							"protocol": "http",
+							"raw": "https://vehicle-app-production.up.railway.app/vehicle/year/Aventador/2001",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"vehicle-app-production",
+								"up",
+								"railway",
+								"app"
 							],
-							"port": "8000",
 							"path": [
 								"vehicle",
 								"year",
-								""
+								"Aventador",
+								"2001"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "Contoh update vehicle year",
+							"name": "Update vehicle year",
 							"originalRequest": {
 								"method": "PATCH",
 								"header": [],
@@ -2372,6 +3951,73 @@
 								{
 									"key": "Keep-Alive",
 									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Year updated successfully\"\n}"
+						},
+						{
+							"name": "Update vehicle year",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newYear\": \"2023\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://vehicle-app-production.up.railway.app/vehicle/year/Aventador/2001",
+									"protocol": "https",
+									"host": [
+										"vehicle-app-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"vehicle",
+										"year",
+										"Aventador",
+										"2001"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "39"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"27-jk8e3nMDPHn3wXBUKEHjsgBk0VE\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Jun 2023 13:45:51 GMT"
+								},
+								{
+									"key": "server",
+									"value": "railway"
 								}
 							],
 							"cookie": [],
